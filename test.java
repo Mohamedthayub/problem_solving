@@ -1,10 +1,10 @@
+import java.util.HashSet;
+import java.util.Set;
 public class main{
     public static void main(String[] args){
-        int[] arr = {1,2,3,4,5};
-        String temp = "";
-        for(int i = 0; i<arr.length; i++){
-            temp = arr[i] + " " + temp ;
-        }
-        System.out.print(temp);
-    }
+        int[] arr = {1,2,3,4,5,};
+        int[] arr2 = {1,2,3};
+        arr.add(arr2[0]);
+        System.out.print(arr);
+    } 
 }
