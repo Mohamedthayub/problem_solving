@@ -1,7 +1,17 @@
-let num = "50";
-if(num % 7 == 0){
-    console.log("true");
+let num = [1,0,1,9,0,2,1,0,3];
+let numbers = [];
+for(let i = 0; i<num.length; i++){
+    if(num[i] != 0){
+        numbers.push(num[i]);
+    }
 }
-else{
-    console.log("false");
+for(let j = 0; j<num.length; j++){
+    if(num[j] == 0){
+        numbers.push(num[j]);
+    }
 }
+
+for(let k = 0; k<numbers.length; k++){
+    num[k] = numbers[k];
+}
+console.log(num);

@@ -34,3 +34,24 @@ class Solution {
     }
     
 }
+
+class Solution {
+    pushZerosToEnd(arr) {
+        // code here
+        let temp = [];
+        for(let i = 0; i<arr.length; i++){
+            if(arr[i] != 0){
+                temp.push(arr[i])
+            }
+        }
+        for(let t = 0; t<arr.length; t++){
+            if(arr[t] == 0){
+                temp.push(arr[t]);
+            }
+        }
+        for(let j = 0; j<temp.length; j++){
+            arr[j]  = temp[j];
+        }
+    }
+    
+}
