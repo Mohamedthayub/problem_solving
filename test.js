@@ -1,6 +1,4 @@
-let a = "3";
-let b = "10";
-a = Number(a);
-b = Number(b);
-let res = a ** b;
-console.log(res % 10)
+let  nums = [131, 11, 48];
+nums = nums.join('').split('').map(Number);
+let result = new Set(nums);
+

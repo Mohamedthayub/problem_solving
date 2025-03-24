@@ -15,6 +15,8 @@ Output: false
 Explanation: No pair is possible as only one element is present in arr[].
 
 */
+// i have solved this with two pointer approach  
+
 
 class Solution {
     boolean twoSum(int arr[], int target) {

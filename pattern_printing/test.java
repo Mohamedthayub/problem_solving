@@ -1,19 +1,21 @@
 public class Main{
-    static boolean checkPrime(int num){
-    if(num < 0){
-        return false;
-    }
-    for(int i = 2; i<=num; i++){
-        if(num % 2 == 0){
-            return false;
-            break;
+    public static void main(String[] args){
+        int col = 5;
+        // int space = 0;
+        int count = 15;
+        for(int i = 1; i<=col; i++){
+            for(int  j = 1; j<=i; j++){
+                 System.out.print(count + " ");
+                 count-= 1;
+            }
+            System.out.println();
+           
         }
     }
-    return true;
-
-    }
-    public static void main(String[] args){
-        int num = 4;
-        System.out.print(checkPrime(num));
-    }
 }
+/*
+********
+***  ***
+**    **
+*      *
+*/
