@@ -1,10 +1,16 @@
+let str = "";
 let num = 1004;
-let arr = num.toString().split("").map(Number);
-for(let i = 0; i<arr.length; i++){
-    if(arr[i] == 0){
-        arr[i] = 5;
+let str2 = num.toString();
+let five = "5";
+for(let i = 0; i<str2.length; i++){
+    if(str2[i] == "0"){
+       str = str + five;
+    }
+    else{
+        str = str + str2[i];
     }
 }
 
-num = Number(arr.join(""));
-console.log(num);
+str = Number(str);
+console.log(str);
+console.log(typeof(str));

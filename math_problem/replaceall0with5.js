@@ -13,6 +13,23 @@ class Solution {
         return num;
     }
 }
+class Solution {
+    convertFive(num) {
+        // code here
+        let str = "";
+        let str2 = num.toString();
+        for(let i = 0; i<str2.length; i++){
+            if(str2[i] == "0"){
+                str = str + "5";
+            }
+            else{
+                str = str + str2[i];
+            }
+        }
+        return Number(str);
+        
+    }
+}
 
 /*
 You are given an integer n. You need to convert all zeroes of n to 5.
