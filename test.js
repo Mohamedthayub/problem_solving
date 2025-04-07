@@ -1,16 +1,6 @@
-let str = "";
-let num = 1004;
-let str2 = num.toString();
-let five = "5";
-for(let i = 0; i<str2.length; i++){
-    if(str2[i] == "0"){
-       str = str + five;
-    }
-    else{
-        str = str + str2[i];
-    }
-}
+// let person = {};
 
-str = Number(str);
-console.log(str);
-console.log(typeof(str));
+// person["name"] = "thayub";
+// person["age"]  = 20;
+// person["address"] = "42a/5 south thaikka street";
+// console.log(person);
