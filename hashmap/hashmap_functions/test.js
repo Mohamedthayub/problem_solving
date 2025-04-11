@@ -6,6 +6,9 @@ map.set("banana",20);
 map.set("jackfruit",40); // we set the value in map
 console.log(map);
 
+map.forEach((key,value) =>{
+    console.log(key,value);
+})
 
 console.log(map.has("apple")); // we check if map has the "banana" key
 
@@ -17,3 +20,4 @@ map.delete("banana"); // we delete the value with the key
 console.log(map);
 map.clear(); // we clear the all value in map 
 console.log(map);
+
