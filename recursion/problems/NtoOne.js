@@ -18,4 +18,4 @@ function printNtoOne(i,n){
     printNtoOne(i-1,n);
 }
 let n = 10;
-printNtoOne(n,n);
+printNtoOne(n,n)
