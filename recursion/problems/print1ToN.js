@@ -1,5 +1,5 @@
 function print1ToNusingBacktracking(i,n){
-    if(i <= 0){
+    if(i < 1){
         return;
     }
     print1ToNusingBacktracking(i-1,n);
