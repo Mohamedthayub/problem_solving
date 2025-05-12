@@ -1,6 +1,5 @@
 public class Main{
     public static void main(String[] main){
-        int num = 12;
         int col = 4;
         for(int i = 0; i<col; i++){
             for(int j = 1; j<=col - i; j++){
