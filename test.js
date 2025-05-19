@@ -1,17 +1,14 @@
-// function findpowerofN(num ,square){
-//     let result = 1;
-//     for(let i = 1; i <= square; i++){
-//         result = result * num;
-//     }
-//     console.log(result);
-// }
-// findpowerofN(9,5);
-
-function findPowerNumber(num,power,result){
-    if(power < 1){
-        console.log(result);
-        return;
+let arr = [0,0,1,1,0];
+let zero = [];
+let one = [];
+for(let i = 0; i<arr.length; i++){
+    if(arr[i] == 0){
+        one.push(arr[i]);
     }
-    findPowerNumber(num, power- 1, result * num);
+    else{
+        zero.push(arr[i]);
+    }
 }
-findPowerNumber(3,3,1);
+for(let j = 0; j<zero.length; j++){
+    arr[j]  = zero[j];
+}
