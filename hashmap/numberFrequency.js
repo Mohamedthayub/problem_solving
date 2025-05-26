@@ -8,7 +8,8 @@ arr.forEach(num => {
         hashMap[num]++;
     }
 })
-console.log(hashMap);
+// console.log(hashMap);
+
 
 
 /*

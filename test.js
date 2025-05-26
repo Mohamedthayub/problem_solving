@@ -1,14 +1,12 @@
-let arr = [0,0,1,1,0];
-let zero = [];
-let one = [];
-for(let i = 0; i<arr.length; i++){
-    if(arr[i] == 0){
-        one.push(arr[i]);
+let num = 1004;
+let res = num.toString();
+let str = "";
+for(let  i = 0; i<res.length; i++){
+    if(res[i] == "0"){
+        str = str + "5";
     }
     else{
-        zero.push(arr[i]);
+        str = str + res[i];
     }
 }
-for(let j = 0; j<zero.length; j++){
-    arr[j]  = zero[j];
-}
+console.log(str);
