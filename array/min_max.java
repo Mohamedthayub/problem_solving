@@ -38,3 +38,21 @@ Input: arr[] = [56789]
 Output: 56789 56789
 Explanation: Since the array contains only one element so both min & max are same.
 */
+
+
+class Solution {
+    getMinMax(arr) {
+        // code here
+        let min = arr[0];
+        let max = arr[0];
+        for(let  i = 0; i<arr.length; i++){
+            if(arr[i] > max){
+                max = arr[i];
+            }
+            else if(arr[i] < min){
+                min = arr[i];
+            }
+        }
+        return [min,max];
+    }
+}
