@@ -16,6 +16,18 @@ class Solution {
         }
     }
 }
+function checkPalidrome(str){
+    let start = 0;
+    let end = str.length - 1;
+    while(start <= end){
+        if(str[start] != str[end]){
+            return "Not Palidrome";
+        }
+        start++;
+        end--;
+    }
+    return "Palidrome";
+}
 
 /*
 You are given a string s. Your task is to determine if the string is a palindrome. A string is considered a palindrome if it reads the same forwards and backwards.
