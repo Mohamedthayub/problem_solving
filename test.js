@@ -1,16 +1,10 @@
-let arr = [12,0];
-// output = [180,600,360,300,900];
-let value = [];
-for(let i = 0; i<arr.length; i++){
-    let sum = 1;
-    for(let j = 0; j<arr.length; j++){
-        if(j == i){
-            continue
+let nums  = [3,2,4];
+// output = [1,2];
+let target  = 6;
+for(let i = 0; i<nums.length; i++){
+    for(let j = i+1; j<nums.length; j++){
+        if(nums[i] + nums[j] == target){
+            console.log(i,j);
         }
-        sum = sum  * arr[j];
-       
     }
-     value.push(sum)
-    sum = 1;
 }
-console.log(value);
