@@ -16,3 +16,9 @@ function isPair(arr,x){
 }
 
 console.log(isPair([2,5,8,12,30],17));
+
+
+
+/* Function to check whether any pair exists
+whose sum is equal to the given x value
+*/
