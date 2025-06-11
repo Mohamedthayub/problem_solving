@@ -1,7 +1,7 @@
 function checkPalidrome(str){
     let start = 0;
     let end = str.length - 1;
-    while(start <= end){
+    while(start < end){
         if(str[start] != str[end]){
             return "Not Palidrome";
         }
@@ -10,4 +10,4 @@ function checkPalidrome(str){
     }
     return "Palidrome";
 }
-console.log(checkPalidrome("thayub"));
+console.log(checkPalidrome("madam"));
