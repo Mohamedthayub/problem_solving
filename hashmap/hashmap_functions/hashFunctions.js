@@ -21,3 +21,4 @@ console.log(map);
 map.clear(); // we clear the all value in map 
 console.log(map);
 
+

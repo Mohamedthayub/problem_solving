@@ -1,16 +1,4 @@
-// rotate array  d places 
-let arr = [1,2,3,0,0,5,4,0,2,1];
-let zero =  [];
-let number = [];
-for(let i = 0; i<arr.length; i++){
-    if(arr[i] == 0){
-        zero.push(arr[i]);
-    }
-    else{
-        number.push(arr[[i]]);
-    }
+let  arr1 = [1,2,3,4,5] 
+let arr2 = [2,3,4,4,5]
 
-}
-
-console.log(number);
-console.log(zero);
+let map  = new Map();

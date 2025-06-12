@@ -12,6 +12,32 @@ class Solution {
     }
 }
 
+class Solution {
+    findUnion(a, b) {
+        // code here
+        let map = new Map();
+        let temp = [];
+        a.forEach((item) => {
+            if(!map.has(item)){
+                map.set(item,1);
+            }
+            else{
+                map.set(item, map.get(item) + 1);
+            }
+        })
+        b.forEach((item2) => {
+            if(!map.has(item2)){
+                map.set(item2,1);
+            }
+        })
+        for(let arr of map.keys()){
+            temp.push(arr);
+        }
+        return temp.length;
+        
+    }
+}
+
 
 /*
 Given two arrays a[] and b[], the task is to find the number of elements in the union between these two arrays.
