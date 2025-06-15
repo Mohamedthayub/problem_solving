@@ -12,6 +12,19 @@ class Solution {
     }
 }
 
+function removeDuplicates(s) {
+    const seen = new Set(); // acts like a HashSet
+    let result = '';
+
+    for (let char of s) {
+        if (!seen.has(char)) {
+            seen.add(char);
+            result += char; // keep first occurrence
+        }
+    }
+
+    return result;
+}
 
 /*
 Given a string s without spaces, the task is to remove all duplicate characters from it, keeping only the first occurrence.
