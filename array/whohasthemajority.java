@@ -11,14 +11,14 @@ class Solution {
             }
             else if (arr[i] == y){
                 county++;
-            }
-            
+            }            
         }
         if(countx > county){
             return x;
         }
         else if(countx == county){
             return Math.min(x,y);
+
         }
         else{
             return y 
