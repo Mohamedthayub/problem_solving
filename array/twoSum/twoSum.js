@@ -6,6 +6,6 @@ function twoSum(arr,target){
             }
         }
     }
-    return false;
+    return [];
 }
 console.log(twoSum([3,3],6));
