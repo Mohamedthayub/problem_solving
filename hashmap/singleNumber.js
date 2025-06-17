@@ -2,20 +2,21 @@
 class Solution {
     getSingle(arr) {
         // code here
-        let obj = {};
-        arr.forEach(num => {
-            if(obj[num] == undefined){
-                obj[num] = 1;
-            }
-            else{
-                obj[num]++;
-            }
-        })
-        for(let key in obj){
-            if(obj[key] % 2 != 0){
-                return key;
-            }
+       let map = new Map();
+       arr.forEach((item) => {
+        if(!map.has(item)){
+            map.set(item , 1);
         }
+        else{
+            map.set(item , map.get(item) + 1);
+        }
+       })
+       for(let [key ,value] of map){
+        if(value % 2 == 1){
+            return key;
+        }
+       }
+       return -1;
     }
 }
 
