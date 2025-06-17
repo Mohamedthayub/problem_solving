@@ -1,12 +1,28 @@
-let arr = [1,2,3,4];
-let arr2 = [];
-let count = arr.length ;
-for(let i = 0; i<arr.length; i++){
-    arr2[i] = arr[i];
+// let str  = "hello";
+// let temp = "";
+// for(let i = str.length - 1; i >=0; i--){
+//     temp += str[i];
+// }
+// for(let j = 0; j<temp.length; j++){
+//     str[j] = temp[j];
+// }
+// console.log(temp);
+
+
+function reverseString(str){
+    let arr = str.split("");
+    let start = 0;
+    let end = str.length - 1;
+    while(start < end){
+        let temp = arr[end];
+        arr[end] = arr[start];
+        arr[start] = temp;
+
+        
+        start++;
+        end--
+
+    }
+    return arr.join("");
 }
-// console.log(arr.length * 2);
-for(let j = arr.length-1; j>=0;  j--){
-    arr2[count]  = arr[j];
-    count++;
-}
-console.log(arr2);
+console.log(reverseString("thayub"));
