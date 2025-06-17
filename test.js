@@ -1,11 +1,16 @@
-function twoSum(arr,target){
-    for(let i = 0; i<arr.length; i++){
-        for(let j = i+1; j<arr.length; j++){
-            if(arr[i] + arr[j] == target){
-                return [i,j];
-            }
-        }
+let map = new Map();
+let arr = [1,2,3,4,5,5];
+arr.forEach((item) => {
+    if(!map.has(item)){
+        map.set(item, 1);
     }
-    return false;
+    else{
+        map.set(item, map.get(item) + 1);
+    }
+})
+for(let [key,value] of map){
+    let temp = 5;
+    if(map.has(temp)){
+        console.log(map.get(temp))
+    }
 }
-console.log(twoSum([3,3],6));
