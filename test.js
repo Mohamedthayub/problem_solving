@@ -1,15 +1,18 @@
-let nums  = [3,2,4];
-// output = [1,2];
-let target  = 6;
-function TwoSum(arr,target){
-    let map = new Map();
-    arr.forEach((item) => {
-        if(map[item] == undefined){
-            map[item]  = 1;
+function findThePair(arr,target){
+    let start = 0;
+    let end = arr.length - 1;
+    while(start  < end){
+        let sum = arr[start] + arr[end];
+        if(sum  == target){
+            return true;
+        }
+        else if (sum < target){
+            start++;
         }
         else{
-            map[item]++;
+            end--;
         }
-    })
-    let sum = 0;
+    }
+    return false;
 }
+console.log(findThePair([1,2,3,4,5,6],3));
