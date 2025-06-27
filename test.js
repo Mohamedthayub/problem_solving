@@ -1,13 +1,8 @@
-function largestElement(arr){
-    if(arr.length === 0){
-        return null;
+function factorialN(num){
+    let sum = 1;
+    for(let i = 1; i<=num; i++){
+        sum = sum * i;
     }
-    let largest = arr[0];
-    for(let i = 0; i<arr.length; i++){
-        if(arr[i] > largest){
-            largest = arr[i];
-        }
-    }
-    return largest;
+    return sum;
 }
-console.log(largestElement([1,2,3,4,5]));
+console.log(factorialN(5));
