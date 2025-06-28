@@ -3,12 +3,16 @@ class Solution {
     // Function to reverse the array.
     reverseArray(arr) {
         // your code here
-        let temp = [];
-        for(let i = 1; i<=arr.length; i++){
-            temp[i-1] = arr[arr.length - i];
-        }
-        for(let j = 0; j<temp.length; j++){
-            arr[j] = temp[j];
+        let left = 0;
+        let right = arr.length - 1;
+        while(left < right){
+            let temp = arr[right];
+            arr[right] = arr[left];
+            arr[left] = temp;
+            
+            
+            left++;
+            right--;
         }
     }
 }

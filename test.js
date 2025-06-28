@@ -1,8 +1,6 @@
-function factorialN(num){
-    let sum = 1;
-    for(let i = 1; i<=num; i++){
-        sum = sum * i;
-    }
-    return sum;
+let arr = [1,2,3,4,5];
+let temp = [];
+
+for(let i = 1; i<=arr.length; i++){
+    
 }
-console.log(factorialN(5));
