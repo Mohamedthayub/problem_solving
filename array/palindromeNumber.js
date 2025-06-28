@@ -1,22 +1,23 @@
 
 
+
 class Solution {
     isPalindrome(n) {
         // code here
-        n = n.toString();
-        let temp = "";
-        let str = n;
-        for(let i = 1; i<=n.length; i++){
-            temp =  temp + n[n.length - i];
-        }
-        if(temp == str){
-            return true;
-        }
-        else{
-            return false;
-        }
+         let revnum = 0;
+         let temp = n;
+         while(n > 0){
+             let lastdigit = n % 10;
+             n = Math.floor(n / 10);
+             revnum = (revnum * 10) + lastdigit;
+         }
+         if(temp == revnum){
+             return true;
+         }
+         else{
+             return false;
+         }
     }
-    
 }
 
 /*

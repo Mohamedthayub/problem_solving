@@ -2,7 +2,7 @@ class Solution {
 
     countOddEven(arr) {
         // Your code here
-        let resul = []
+        let result = []
         let odd = 0;
         let even = 0;
         for(let i = 0; i<arr.length; i++){
@@ -13,9 +13,9 @@ class Solution {
                 odd++
             }
         }
-        resul.push(odd)
-        resul.push(even);
-        return resul;
+        result.push(odd)
+        result.push(even);
+        return result;
         
         
     }
