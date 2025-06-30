@@ -1,6 +1,6 @@
-function powerofNumber(num1,square){
+function powerofNumber(num1,power){
     let result = 1;
-    for(let i = 1; i<=square; i++){
+    for(let i = 1; i <= power; i++){
         result = result  * num1;
     }
     return result;

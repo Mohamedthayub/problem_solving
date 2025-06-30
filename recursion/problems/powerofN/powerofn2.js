@@ -1,4 +1,4 @@
-function powerofN(number,power,result =1){
+function powerofN(number,power,result =  1){
     if(power < 1){
         return result;
     }
