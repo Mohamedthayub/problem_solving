@@ -1,19 +1,12 @@
-let arr = [4,4,2,4,3,4,4,3,2,4];
-let number = Math.floor(arr.length / 2);
+let arr = [10,20,30,40,50];
 
-let map = new Map();
+let prefixSum = [];
 
-arr.forEach((item) => {
-    if(!map.has(item)){
-        map.set(item,1);
-    }
-    else{
-        map.set(item, map.get(item) + 1);
-    }
+prefixSum[0] = arr[0];
 
-})
-for(let [key ,value] of map){
-    if(value > number){
-        console.log(key);
-    }
+
+for(let i = 1; i<arr.length; i++){
+    prefixSum[i] = prefixSum[i-1] + arr[i];
 }
+
+console.log(prefixSum);
