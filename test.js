@@ -1,12 +1,10 @@
-let arr = [10,20,30,40,50];
+let arr = [1,2,3,4,5];
 
-let prefixSum = [];
-
-prefixSum[0] = arr[0];
-
-
-for(let i = 1; i<arr.length; i++){
-    prefixSum[i] = prefixSum[i-1] + arr[i];
+for(let i = 0; i<arr.length; i++){
+    if(i % 2  != 0){
+        let  temp  = arr[i];
+        arr[i] = arr[i-1];
+        arr[i-1] = temp;
+    }
 }
-
-console.log(prefixSum);
+console.log(arr);
