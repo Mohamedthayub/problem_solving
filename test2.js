@@ -1,14 +1,15 @@
-function plusOne(arr){
-    for(let i = arr.length -1 ; i>=0; i--){
-        if(arr[i] < 9){
-            arr[i] += 1;
-            return arr;
-        }
-        else{
-            arr[i] = 0;
-        }
-    }
-    arr.unshift(1);
-    return arr;
+let arr = [10,3,5,6,2];
+let left  = [1];
+let right = [];
+for(let i = 0; i<arr.length-1; i++){
+    left[i+1] = left[i] * arr[i];
 }
-console.log(plusOne([9,9,9]));
+right[arr.length - 1] = 1
+for(let j = arr.length - 1; j>0; j--){
+    right[j-1] = right[j] * arr[j];
+}
+let  result = [];
+for(let k = 0; k<left.length; k++){
+    result[k] = left[k] * right[k];
+}
+console.log(result);
