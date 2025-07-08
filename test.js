@@ -1,6 +1,17 @@
-let arr = [10,20,10,5,15];
-let prefixArr = [];
-prefixArr[0] = arr[0];
-for(let i = 1; i<arr.length; i++){
-    prefixArr[i] = prefixArr[i-1] + arr[i];
+let arr  =  [10,3,5,6,2];
+let left = [];
+
+left[0] = 1;
+for(let i =  0; i<arr.length - 1; i++){
+    left[i+1] = left[i] * arr[i] ; 
 }
+let right = [];
+right[arr.length - 1] = 1;
+for(let j = arr.length - 1; j>0; j--){
+    right[j-1] = right[j] * arr[j];
+};
+
+for(let k = 0; k<arr.length; k++){
+    arr[k] = left[k] * right[k];
+}
+console.log(arr);

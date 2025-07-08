@@ -2,20 +2,25 @@
 class Solution {
     productExceptSelf(arr) {
         // code here
-        let temp = [];
-        for(let i = 0; i<arr.length; i++){
-            let sum = 1;
-            for(let j = 0; j<arr.length; j++){
-                if(j != i){
-                 sum = sum * arr[j];   
-                }
-            }
-            temp.push(sum);
-            sum = 1;
+        let left = [];
+        left[0] = 1;
+        for(let i = 0; i<arr.length - 1; i++){
+            left[i+1] = left[i] * arr[i];
         }
-        return temp;
+        let right = [];
+        right[arr.length - 1] = 1;
+        for(let j = arr.length -1; j>0; j--){
+            right[j - 1] = right[j] * arr[j];
+        }
+        for(let k = 0; k<arr.length; k++){
+            arr[k] = left[k] * right[k];
+        }
+        return arr;
     }
+    
 }
+// i have solved this with prefix and suffix product algorithm
+
 
 /*
 
