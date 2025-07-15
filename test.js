@@ -1,7 +1,15 @@
-let arr = [10,20,10,5,15];
-let prefixSum = [];
-prefixSum[0] = arr[0];
-for(let  i = 0; i<arr.length-1; i++){
-    prefixSum[i+1] = prefixSum[i] + arr[i+1];
+let arr = [1,1,1,0,0,1,1,1,1,0,1];
+
+let max = [];
+let count = 0;
+for(let i = 0; i<arr.length; i++){
+    if(arr[i] == 1){
+        count++;
+    }
+    else{
+        max.push(count);
+        count = 0;
+    }
 }
-console.log(prefixSum);
+max.push(count);
+console.log(Math.max(...max));
