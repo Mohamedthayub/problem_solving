@@ -24,11 +24,11 @@ if (!vajiha.has("thayub")) {
 } else {
     console.log("I am not vajiha.");
 }
+for (let key of vajiha) {
 
 vajiha.forEach((item) => {
     console.log(item); // Prints: 1, 2, 3
 });
 
-for (let key of vajiha) {
     console.log(key); // Prints: 1, 2, 3
 }
