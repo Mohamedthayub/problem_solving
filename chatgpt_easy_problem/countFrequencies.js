@@ -11,3 +11,12 @@ function freqencyElement(arr){
     return map;
 }
 console.log(freqencyElement([1, 2, 2, 3, 3, 3]));
+
+/*
+🔢 Input: [1, 2, 2, 3, 3, 3]
+✅ Output:
+1 → 1 time  
+2 → 2 times  
+3 → 3 times
+
+*/
