@@ -1,11 +1,20 @@
-function checkForDuplicates(arr){
-    for(let i = 0; i<arr.length - 1; i++){
-        for(let j = i+1; j<arr.length; j++){
-            if(arr[i] == arr[j]){
-                return true;
-            }
+function findPairs(arr,target){
+    arr.sort();
+    let left = 0;
+    let right = arr.length - 1;
+    let pairs = [];
+    while(left <= right){
+        let result = arr[left] + arr[right];
+        if(result == target){
+            pairs.push([arr[left],arr[right]]);
+        }
+        else if (result < target){
+            left += 1;
+        }
+        else{
+            right -= 1;
         }
     }
-    return false;
+    return pairs;
 }
-console.log(checkForDuplicates([1,2,3,4,5,1]));
+console.log(findPairs([1, 5, 7, -1, 5],6));
