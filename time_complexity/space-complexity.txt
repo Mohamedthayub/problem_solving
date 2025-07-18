@@ -1,0 +1,39 @@
+What is space Complexity ? 
+It means how much extra memory (array, object, recursion stack) the program uses.
+
+1. Constant Space — O(1)
+
+function printSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  console.log(sum);
+}
+
+Only variable sum -> 0(1);
+
+
+2. Linear Space — O(n)
+
+function copyArray(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(arr[i]);
+  }
+  return newArr;
+}
+
+
+New array size n → O(n)
+
+
+3. Space Complexity with Recursion
+
+function factorial(n) {
+  if (n === 1) return 1;
+  return n * factorial(n - 1);
+}
+
+Stack frame used for every function call → O(n) space
+
