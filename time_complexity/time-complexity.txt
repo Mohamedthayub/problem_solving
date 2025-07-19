@@ -1,7 +1,7 @@
 Time complexity is  not taken 
 
 for example :
-there are two computer one is old macbook and another one is new macbook 
+there are two computer one is old macbook clelarand another one is new macbook 
 if you run  your a code in old macbook  that might take end to complete 3s 
 the new macbook  might take end to complete 1s . this is why time complexity can't be
 time taken
