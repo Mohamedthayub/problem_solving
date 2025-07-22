@@ -1,20 +1,22 @@
-function findPairs(arr,target){
-    arr.sort();
-    let left = 0;
-    let right = arr.length - 1;
+function frequency(arr,target){
     let pairs = [];
-    while(left <= right){
-        let result = arr[left] + arr[right];
-        if(result == target){
-            pairs.push([arr[left],arr[right]]);
-        }
-        else if (result < target){
-            left += 1;
+    let map = new Map();
+    for(let i = 0; i<arr.length; i++){
+        if(!map.has(arr[i])){
+            map.set(arr[i] , 1);
         }
         else{
-            right -= 1;
+            map.set(arr[i], map.get(arr[i]) + 1);
         }
     }
-    return pairs;
+    let count = 0 ;
+    for(let [key,value] of map){
+        count++;
+        if(key + arr[count] == target){
+            pairs.push([key,arr[count]])
+        }
+    }
+    return  pairs
 }
-console.log(findPairs([1, 5, 7, -1, 5],6));
+
+console.log(frequency([1,3,4,6,8,9],7));
