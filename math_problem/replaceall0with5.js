@@ -1,4 +1,8 @@
-
+lls
+clear
+ls
+clear
+ls
 
 class Solution {
     convertFive(num) {
