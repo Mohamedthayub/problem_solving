@@ -1,4 +1,4 @@
-function  addDigits(num){
+var addDigits = function(num) {
     if(num < 10){
         return num;
     }
@@ -11,8 +11,7 @@ function  addDigits(num){
         num = sum;
     }
     return num;
-}
-console.log(addDigits(38));
+};
 
 /*
 Given an integer num, repeatedly add all its digits until the result has only one digit, and return it.
