@@ -1,9 +1,9 @@
-function  check(words){
-    for(let i = 0; i<words.length; i++){
-    if(words[i] == words[i].split('').reverse().join('')){
-        return words[i];
-    }
+let n = 7;
+let sum = 0;
+for(let i = 1; i<=n; i++){
+     if(i % 3 == 0  ||  i % 5 == 0 || i % 6 == 0 || i % 7 == 0){
+        sum = sum + i
+     }
 }
-}
-let words = ["abc","car","ada","racecar","cool"];
-console.log(check(words));
+
+console.log(sum);
