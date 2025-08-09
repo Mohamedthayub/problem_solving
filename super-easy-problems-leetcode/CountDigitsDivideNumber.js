@@ -8,7 +8,18 @@ var countDigits = function(num) {
     }
     return count;
 };
-
+var countDigits = function(num) {
+    let count = 0;
+    let temp = num;
+    while(num > 0){
+        let divideNum = num % 10;
+        if(temp % divideNum == 0){
+            count++;
+        }
+        num = Math.floor(num / 10);
+    }
+    return count;
+};
 
 
 /*

@@ -1,10 +1,11 @@
 let num = 1248;
-// let temp = num;
+let temp = num;
 let count = 0;
-let str = num.toString();
-for(let i = 0; i<str.length; i++){
-    if(num % Number(str[i]) == 0){
+while(num > 0){
+    let divide = num % 10;
+    if(temp % divide === 0){
         count++;
     }
+    num = Math.floor(num / 10);
 }
 console.log(count);
