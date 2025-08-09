@@ -1,7 +1,10 @@
-let nums = [9,72,34,29,-49,-22,-77,-17,-66,-75,-44,-30,-24]
-
-let num = 1;
-for(let i = 0; i<nums.length; i++){
-    num = num * nums[i];
+let num = 1248;
+// let temp = num;
+let count = 0;
+let str = num.toString();
+for(let i = 0; i<str.length; i++){
+    if(num % Number(str[i]) == 0){
+        count++;
+    }
 }
-console.log(num)
+console.log(count);
