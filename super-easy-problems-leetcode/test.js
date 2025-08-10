@@ -1,11 +1,11 @@
-let num = 1248;
-let temp = num;
-let count = 0;
-while(num > 0){
-    let divide = num % 10;
-    if(temp % divide === 0){
-        count++;
+let accounts = [[1,5],[7,3],[3,5]];
+let wealth = [];
+for(let i = 0; i<accounts.length; i++){
+    let sum = 0;
+    for(let j = 0; j<accounts[i].length; j++){
+        sum = sum + accounts[i][j];
     }
-    num = Math.floor(num / 10);
+    wealth.push(sum);
+    sum  = 0;
 }
-console.log(count);
+console.log(wealth);
