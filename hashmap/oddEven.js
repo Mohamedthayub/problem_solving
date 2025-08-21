@@ -1,12 +1,17 @@
-let numbers= [1,2,3,4,5];
-let hashmap = {};
-numbers.forEach(num =>{
+let number = [1,2,3,4,5,6];
+let map = new Map();
+number.forEach((num) => {
+    if(!map.has("even")){
+        map.set("even", 0);
+    }
+    if(!map.has("odd")){
+        map.set("odd",0);
+    }
     if(num % 2 == 0){
-        hashmap["even"] = (hashmap["even"] || 0) + 1;
+        map.set("even",map.get("even") + 1);
     }
-    else{
-        hashmap["odd"] = (hashmap["odd"] || 0) + 1;
+    if(num % 2 != 0){
+        map.set("odd",map.get("odd") + 1);
     }
-
 })
-console.log(hashmap)
+console.log(map);

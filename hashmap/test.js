@@ -1,19 +1,17 @@
-const { hash } = require("bcrypt");
-
+let number = [1,2,3,4,5,6];
 let map = new Map();
-
-let arr = [1,2,3,4,5];
-
-arr.forEach((item) => {
-    if(!map[item]){
-        map.set(item,1);
+number.forEach((num) => {
+    if(!map.has("even")){
+        map.set("even", 0);
     }
-    else{
-        map.set(item , hash.get(item) + 1);
+    if(!map.has("odd")){
+        map.set("odd",0);
+    }
+    if(num % 2 == 0){
+        map.set("even",map.get("even") + 1);
+    }
+    if(num % 2 != 0){
+        map.set("odd",map.get("odd") + 1);
     }
 })
-for(let [key,value] of  map){
-    if(key == 2){
-        console.log("false");
-    }
-}
+console.log(map);
