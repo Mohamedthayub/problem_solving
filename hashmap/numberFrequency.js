@@ -1,14 +1,14 @@
 let hashMap = new Map();
-let arr = [1,2,3,4,5];
-arr.forEach(num => {
-    if(hashMap[num] == undefined){
-        hashMap[num] = 1;
+let arr = [1, 2, 3, 2, 1, 3, 3, 5];
+arr.forEach((item) => {
+    if(!hashMap.has(item)){
+        hashMap.set(item, 1);
     }
     else{
-        hashMap[num]++;
+        hashMap.set(item,hashMap.get(item) + 1);
     }
 })
-// console.log(hashMap);
+console.log(hashMap);
 
 
 
