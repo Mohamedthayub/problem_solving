@@ -15,6 +15,13 @@ class Solution {
     }
 }
 
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+let k = 3;
+
+let n = arr.length;
+[arr[k - 1], arr[n - k]] = [arr[n - k], arr[k - 1]];
+
+console.log(arr);
 
 /*
 Given an array arr[], swap the kth element from the beginning with the kth element from the end.

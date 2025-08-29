@@ -1,15 +1,24 @@
-let arr = [10,3,5,6,2];
-let left  = [1];
-let right = [];
-for(let i = 0; i<arr.length-1; i++){
-    left[i+1] = left[i] * arr[i];
+// Given an array arr[], swap the kth element from the beginning with the kth element from the end.
+
+// Note: 1-based indexing is followed.
+
+// Examples :
+
+// Input: arr[] = [1, 2, 3, 4, 5, 6, 7, 8], k = 3
+// Output: [1, 2, 6, 4, 5, 3, 7, 8]
+// Explanation: 3rd element from beginning is 3 and 3rd element from end is 6, so we replace 3 & 6.
+// Input: arr[] = [5, 3, 6, 1, 2], k = 2
+// Output: [5, 1, 6, 3, 2]
+// Explanation: 2nd element from beginning is 3 and from end is 1.
+
+
+let arr =  [1, 2, 3, 4, 5, 6, 7, 8];
+let k = 3;
+for(let i = 0; i<arr.length; i++){
+    if(i+1 == k) {
+        let temp  = arr[arr.length - k ];
+        arr[arr.length - k] = arr[i];
+        arr[i] = temp;
+    }
 }
-right[arr.length - 1] = 1
-for(let j = arr.length - 1; j>0; j--){
-    right[j-1] = right[j] * arr[j];
-}
-let  result = [];
-for(let k = 0; k<left.length; k++){
-    result[k] = left[k] * right[k];
-}
-console.log(result);
+console.log(arr);
