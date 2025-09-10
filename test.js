@@ -1,22 +1,4 @@
-let temp = [];
-let ops = ["5","2","C","D","+"];
-ops.forEach((item) => {
-    if(item == Number(item)){
-        temp.push(Number(item));
-    }
-    if(item == "C"){
-        temp.pop();
-    }
-    if(item == "D"){
-        let double = 2 * temp[temp.length - 1];
-        temp.push(double);      
-    }
-    if(item == "+"){
-        let last = temp[temp.length - 1];
-        let last2 = temp[temp.length - 2];
-        temp.push(last + last2);
-    }
-    
-})
-let result = temp.reduce((acc,sum) => acc  + sum);
-console.log(result);
+let arr = [1,2,3,4,5,6,7,8];
+let k = 3;
+[arr[k-1], arr[arr.length -k]] = [arr[arr.length - k],arr[k-1]];
+console.log(arr);

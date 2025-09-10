@@ -1,8 +1,8 @@
-let number = [1,2,3,4,5,6];
+let arr = [1,2,3,4,5,6];
 let map = new Map();
-number.forEach((num) => {
+arr.forEach((num) => {
     if(!map.has("even")){
-        map.set("even", 0);
+        map.set("even",0);
     }
     if(!map.has("odd")){
         map.set("odd",0);
