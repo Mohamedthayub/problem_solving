@@ -1,13 +1,13 @@
 function reverseString(str){
+    let arr = str.split("");
     let start = 0;
     let end = str.length - 1;
-    while(start <= end){
-        let temp = str[start];
-        str[start] = str[end];
-        str[end]  = temp;
+    while(start < end){
+        [arr[start], arr[end]] = [arr[end] , arr[start]];
+        start++;
+        end--;   
     }
-    start++;
-    end--;   
+    return arr.join("");
 }
 
 console.log(reverseString("thayub"));

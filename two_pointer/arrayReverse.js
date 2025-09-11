@@ -2,11 +2,8 @@ function arrayReverse(arr){
     let start = 0;
     let end = arr.length - 1;
 
-    if(start < end){
-        let temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
-
+    while(start < end){
+      [arr[start], arr[end]] = [arr[end] , arr[start]];
         start++;
         end--;
     }

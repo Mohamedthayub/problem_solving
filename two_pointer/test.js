@@ -1,9 +1,20 @@
-let arr = [1,2,3,4,5];
-let arr2  = [1,2,3,4,5];
-let temp = [];
-for(let i = 0 ;i<arr2.length; i++){
-    if(!arr.includes(arr2[i])){
-        arr.push(arr2[i]);   
-    }
+// before using two pointer the array should be sorted 
+
+function findTheTarget(arr,target){
+    let start = 0;
+    let end = arr.length - 1;
+    while(start < end){
+        let sum = arr[start] + arr[end];
+        if(sum == target){
+            return true;
+        }
+        else if (sum == target){
+            start++;
+        }
+        else{
+            end--
+        }
+    }    
+    return false;
 }
-console.log(arr);
+console.log(findTheTarget([-3,-1,0,1,2,],-2));
