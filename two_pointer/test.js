@@ -1,20 +1,17 @@
-// before using two pointer the array should be sorted 
-
-function findTheTarget(arr,target){
+function isPalidrome(str){
     let start = 0;
-    let end = arr.length - 1;
+    let end = str.length - 1;
+    if(str.length == 0){
+        return "Not Palidrome";
+    }
     while(start < end){
-        let sum = arr[start] + arr[end];
-        if(sum == target){
-            return true;
+        if(str[start] != str[end]){
+            return "Not Palidrome";
         }
-        else if (sum == target){
-            start++;
-        }
-        else{
-            end--
-        }
-    }    
-    return false;
+        start++;
+        end--
+    }
+    return "Palidrome "
 }
-console.log(findTheTarget([-3,-1,0,1,2,],-2));
+
+console.log(isPalidrome("school"));
