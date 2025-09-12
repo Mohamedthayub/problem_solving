@@ -1,12 +1,16 @@
-let arr = [2,3,5,1,9];
-let n = 3;
-let k = 10;
-let sum = 0;
-let temp = [];
-for(let i = 0; i<arr.length; i++){
-    temp.push(arr[i]);
-    sum = sum + arr[i];
-    if(sum == k){
-        console.log(temp.length);
+function twoSum(arr,target){
+    if(arr.length === 0){
+        return -1;
     }
+    let map = new Map();
+    for(let i = 0; i<arr.length; i++){
+        let compliment = target - arr[i];
+        if(map.has(compliment)){
+            return [map.get(compliment) ,i];
+        }
+        map.set(arr[i],i);
+    }
+    return -1;
 }
+console.log(twoSum([1,2,3,4,5],7));
+
