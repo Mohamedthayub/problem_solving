@@ -1,16 +1,15 @@
-function twoSum(arr,target){
-    if(arr.length === 0){
-        return -1;
+function rotateArrayByone(arr){
+    let first = arr[0];
+    for(let i = 1; i<arr.length; i++){
+        arr[i-1] = arr[i];
     }
-    let map = new Map();
-    for(let i = 0; i<arr.length; i++){
-        let compliment = target - arr[i];
-        if(map.has(compliment)){
-            return [map.get(compliment) ,i];
-        }
-        map.set(arr[i],i);
-    }
-    return -1;
+    arr[arr.length - 1] = first;
+    return arr ;
 }
-console.log(twoSum([1,2,3,4,5],7));
 
+console.log(rotateArrayByone([5,4,3,2,1]));
+//[1,2,3,4,5];
+// [2,3,4,5,1];
+
+// 2,3,4,5
+// 0,1,2,3 
