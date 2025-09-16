@@ -1,26 +1,14 @@
+function unionOfArray(arr,arr2){
+    let set = new Set([...arr,...arr2]);
 
-class Solution {
-    findUnion(a, b) {
-        // code here
-        let union = [];
-        let map = new Map();
-        for(let i = 0; i<a.length; i++){
-            if(!map.has(a[i])){
-                map.set(a[i],1);
-            }
-        }
-        for(let j = 0; j<b.length; j++){
-            if(!map.has(b[j])){
-                map.set(b[j],1);
-            }
-        }
-        for(let [key,value] of map){
-            union.push(key);
-        }
-       let afterSort =  union.sort((a,b) => a-b);
-       return afterSort;
-    }
+    let newArr = Array.from(set);
+
+    let afterSort = newArr.sort((a,b) => a -b);
+    return afterSort
+    
+
 }
+console.log(unionOfArray([1,2,3,4,5],[6,6,7,9]));
 
 /*
 Given two sorted arrays a[] and b[], where each array may contain duplicate elements , the task is to return the elements in the union of the two arrays in sorted order.
