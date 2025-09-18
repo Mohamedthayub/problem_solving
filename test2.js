@@ -1,24 +1,12 @@
-// Given an array arr[], swap the kth element from the beginning with the kth element from the end.
-
-// Note: 1-based indexing is followed.
-
-// Examples :
-
-// Input: arr[] = [1, 2, 3, 4, 5, 6, 7, 8], k = 3
-// Output: [1, 2, 6, 4, 5, 3, 7, 8]
-// Explanation: 3rd element from beginning is 3 and 3rd element from end is 6, so we replace 3 & 6.
-// Input: arr[] = [5, 3, 6, 1, 2], k = 2
-// Output: [5, 1, 6, 3, 2]
-// Explanation: 2nd element from beginning is 3 and from end is 1.
-
-
-let arr =  [1, 2, 3, 4, 5, 6, 7, 8];
-let k = 3;
-for(let i = 0; i<arr.length; i++){
-    if(i+1 == k) {
-        let temp  = arr[arr.length - k ];
-        arr[arr.length - k] = arr[i];
-        arr[i] = temp;
+function findTheLeader(arr){
+    let leader = [];
+    let max = 0;
+    for(let i = arr.length - 1; i>=0; i--){
+        if(arr[i] >= max){
+            max = arr[i];
+            leader.unshift(max);
+        }
     }
+    return leader;
 }
-console.log(arr);
+console.log(findTheLeader( [5,10,20,40]));
