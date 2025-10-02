@@ -1,20 +1,9 @@
- // 1 * 1 = 1
- // 2 * 2 = 4
- // 3 *  3 = 9 
- // 4 * 4  = 16
+let factorial = 0;
+let num = 153;
+while(num > 0){
+    let last = num % 10;
+    factorial = factorial + (last * last * last);
+    num = Math.floor(num / 10);
 
-function findTheroot(n){
-    for(let i = 1; i<=n; i++){
-        let result = i* i;
-        if(result == n){
-            return i;
-        }
-        else if (result > n){
-            let exit = i - 1;
-            let value = exit * exit;
-            let finalValue = Math.floor(value / exit);
-            return finalValue;
-        }
-    }
 }
-console.log(findTheroot(11));
+console.log(factorial);

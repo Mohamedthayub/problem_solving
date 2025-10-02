@@ -1,16 +1,34 @@
 
 
-class Solution {
+// this is optimal approach 
+class Solution { 
     gcd(a, b) {
         // code here
         while (b !== 0) {
         let temp = b;
         b = a % b;
-        a = temp;
+        a = temp; 
        }
     return a;
     }
 }
+
+// this  is brute force approach
+
+class Solution {
+    gcd(a, b) {
+        // code here
+        let gcd ;
+        for(let i = 1; i<=b; i++){
+            if(a % i == 0 && b % i == 0){
+                gcd = i
+            }
+        }
+        return gcd;
+    }
+}
+
+
 /*
 Given two positive integers a and b, find GCD of a and b.
 
