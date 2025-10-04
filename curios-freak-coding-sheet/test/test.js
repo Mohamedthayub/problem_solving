@@ -1,14 +1,12 @@
-let n = 20;
-let reverseNum = 0;
-while(n != 0){
-    let lastDigit = n % 10; 
-    if(lastDigit == 0){
-        n = Math.floor(n / 10);
-        continue;
-    }
+function reverseNumber(num){
+   let reverseNum = 0;
+   while(num > 0){
+    let lastDigit = num % 10;
     reverseNum = (reverseNum * 10) + lastDigit;
-    n = Math.floor(n / 10);
+    num = Math.floor(num / 10);
+   }
+   let result = num ** reverseNum;
+   return result;
+    
 }
-console.log(reverseNum);
-
-// 20
+console.log(reverseNumber(123));
