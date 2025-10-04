@@ -1,15 +1,14 @@
-let n = 10;
-let sum = 0;
-for(let i = 1; i<n; i++){
-    if(n %  i == 0){
-        sum = sum + i;
-        console.log(i);
+function reverseNum(num){
+    let str = num.toString();
+    let temp = "";
+    for(let i = str.length - 1 ; i>=0; i--){
+        if(str[i] == "0"){
+            continue;
+        }
+        else{
+            temp = temp + str[i];
+        }
     }
-} 
-
-if(sum == n){
-    console.log(true);
+    return Number(temp);
 }
-else{
-    console.log(false);
-}
+console.log(reverseNum(123));

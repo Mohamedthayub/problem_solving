@@ -17,6 +17,24 @@ class Solution {
     }
 }
 
+
+class Solution {
+    reverseDigits(n) {
+        // code here
+        let str = n.toString();
+        let temp = "";
+        for(let i = str.length - 1; i>=0; i--){
+            if(str[i] == "0"){
+                continue;
+            }
+            else{
+                temp = temp + str[i];
+            }
+        }
+        return Number(temp);
+    }
+}
+
 /*
 You are given an integer n. Your task is to reverse the digits, ensuring that the reversed number has no leading zeroes.
 
