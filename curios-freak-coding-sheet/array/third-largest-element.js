@@ -1,6 +1,5 @@
 
 class Solution {
-
     thirdLargest(arr) {
         // your code here
         if(arr.length < 3){
