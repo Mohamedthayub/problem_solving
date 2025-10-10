@@ -1,12 +1,15 @@
-function reverseNumber(num){
-   let reverseNum = 0;
-   while(num > 0){
-    let lastDigit = num % 10;
-    reverseNum = (reverseNum * 10) + lastDigit;
-    num = Math.floor(num / 10);
+function  checkEqualArrays(arr,arr2){
+   if(arr.length != arr2.length){
+      return false;
    }
-   let result = num ** reverseNum;
-   return result;
-    
+   arr.sort((a,b) => a - b);
+   arr2.sort((a,b) => a - b)
+   for(let i = 0; i<arr.length; i++){
+      if(arr[i] != arr2[i]){
+         return false;
+      }
+   }
+   return true;
+
 }
-console.log(reverseNumber(123));
+console.log(checkEqualArrays([5,1,3,2],[5,1,2,3]));

@@ -17,6 +17,24 @@ class Solution {
         }
     }
 }
+class Solution {
+    checkEqual(a, b) {
+        // code here
+        if(a.length != b.length){
+            return false;
+        }
+        a.sort((a,b) => a -b);
+        b.sort((a,b) => a - b);
+        for(let i = 0; i<a.length; i++){
+            if(a[i] != b[i]){
+                return false;
+            }
+        } 
+        return true;
+    }
+    
+}
+
 
 /*
 Given two arrays a[] and b[] of equal size, the task is to find whether the elements in the arrays are equal.

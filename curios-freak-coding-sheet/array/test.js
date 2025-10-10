@@ -1,8 +1,8 @@
-let arr = [1,2,3,5];
-let sum = 0;
-for(let i = 0; i<arr.length; i++){
-    sum = sum + arr[i];
-}
-let n = arr.length + 1;
-let missingSum = n * (n + 1)/ 2;
-console.log(missingSum - sum);
+let arr =  [1, 2, 5, 4, 0];
+let arr2 = [2, 4, 5, 0, 1];
+arr.sort((a,b) => a -b );
+arr2.sort((a, b) => a - b);
+
+console.log(arr);
+console.log(arr2);
+
