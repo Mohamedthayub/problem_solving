@@ -1,8 +1,9 @@
-let arr =  [1, 2, 5, 4, 0];
-let arr2 = [2, 4, 5, 0, 1];
-arr.sort((a,b) => a -b );
-arr2.sort((a, b) => a - b);
-
-console.log(arr);
-console.log(arr2);
-
+function rotateArray(arr){
+    let last = arr[arr.length - 1];
+    for(let i = arr.length - 1; i> 0; i--){
+        arr[i] = arr[i-1];
+    }
+    arr[0] = last;
+    return arr;
+}
+console.log(rotateArray([1,2,3,4,5]));
