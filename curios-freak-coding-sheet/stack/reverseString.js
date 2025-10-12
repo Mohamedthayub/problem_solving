@@ -1,12 +1,27 @@
-function  reverseString(str){
-    let stact  = [];
-    for(let char of str){
-        stact.push(char);
-    } 
-    let reversed = "";
-    while(stact.length > 0){
-        reversed = reversed + stact.pop();
+
+class Solution {
+    reverse(s) {
+        // code here
+        let reverse = [];
+        for(let char of s){
+            reverse.push(char);
+        }
+        let reverseStr = "";
+        while(reverse.length > 0){
+            reverseStr += reverse.pop();
+        }
+        return reverseStr;
     }
-    return reverseString;
 }
-console.log(reverseString("VENKATESH"));
+
+/*
+You are given a string s , the task is to reverse the string using stack.
+
+Examples:
+
+Input: s ="GeeksforGeeks"
+Output:  skeeGrofskeeG
+Input: s ="Geek"
+Output: keeG
+
+*/
