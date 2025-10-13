@@ -1,15 +1,12 @@
-let str = "AAAAA";
-let char = "AA";
-// let result = str.split(char);
-// console.log(result);
-let arr = [];
-let count = 0;
-let temp = "";
-for(let i = 0; i<=str.length - char.length; i++){
-    let temp = str.substring(i , i+char.length);
-    if(temp == char){
-        count++;
-    }
-   
-}
-console.log(count);
+// function  reverseString(str){
+//     let reverse = [1,2,3,4,5];
+    
+//     for(let char of str){
+//         reverse.push(char);
+//     }
+//     while(reverse.length > 0){
+//         reversed = reversed + reverse.pop();
+//     }
+//     return reversed;
+// }
+// console.log(reverseString("thayub"));
