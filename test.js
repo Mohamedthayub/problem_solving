@@ -1,12 +1,16 @@
-let words = ["apple", "civic", "crown", "aba"];
-
-let first = words[0].charAt(0);
-let last = words[0].charAt(words[0].length-1);
-
-let count = 0;
-for(let word of words){
-    if(word[0] == word[word.length -1]){
-        count++;
+function  sumofArray(arr){
+    let sum = 0;
+    for(let i = 0; i<arr.length; i++){
+        sum = sum  + arr[i];
     }
+    let result = sum / 2
+    for(let i = 0; i<arr.length- 1; i++){
+        for(let j = i+1; j<arr.length; j++){
+            if(arr[i] + arr[j] == result){
+                return true;
+            }
+        }
+    }
+    return false;
 }
-console.log(count);
+console.log(sumofArray([1,5,11,5]));
