@@ -1,0 +1,75 @@
+1. What is the Two-Pointer Technique?
+
+The two-pointer technique is an algorithmic approach where two pointers (or indices) traverse an array, string, or linked list to solve problems efficiently. These pointers usually move in a coordinated way—sometimes from both ends, sometimes one moves faster than the other.
+
+Think of it as using two eyes instead of one to scan data more effectively.
+
+2. Why do we use it?
+
+We use two pointers to:
+
+Avoid nested loops → reduces time complexity.
+
+Process sorted arrays efficiently.
+
+Solve problems related to sums, pairs, subarrays, and strings efficiently.
+
+Essentially, it’s used to replace brute force O(n²) approaches with linear O(n) solutions in many cases.
+
+3. When to Use Two Pointers
+
+You should consider two pointers when:
+
+The array or string is sorted.
+Example: Finding two numbers that sum to a target in a sorted array.
+
+You need to find a subarray or substring with a certain property.
+Example: Longest substring without repeating characters.
+
+You need to compare or merge two arrays.
+Example: Merging two sorted arrays.
+
+You’re dealing with problems like palindrome checks, removing duplicates, or partitioning arrays.
+
+4. Common Patterns
+
+Opposite ends: One pointer at start, one at end.
+Example: Find if a sorted array has two numbers with sum = target.
+
+let arr = [1,2,3,4,6];
+let target = 6;
+let left = 0, right = arr.length - 1;
+while (left < right) {
+    let sum = arr[left] + arr[right];
+    if (sum === target) { console.log("Found"); break; }
+    else if (sum < target) left++;
+    else right--;
+}
+
+
+Same direction (slow & fast pointer): Both start from the same end but move at different speeds.
+Example: Detect cycle in linked list.
+
+Sliding window (dynamic two pointers): Expanding and shrinking window for subarray/string problems.
+
+5. Time Complexity
+
+Opposite ends / Sliding window:
+O(n) → each pointer moves at most n steps.
+
+Nested loops replaced by two pointers:
+Usually reduced from O(n²) → O(n).
+
+6. Space Complexity
+
+In-place operations: O(1) extra space.
+
+Sometimes you may need extra space (like hash sets in some variants).
+
+✅ Summary Table
+Aspect	Details
+Technique	Two pointers moving in array/string/linked list
+When to use	Sorted array, substring/subarray, comparing/merging, cycles
+Time complexity	Usually O(n)
+Space complexity	Usually O(1)
+Common problems	Two sum, palindrome check, remove duplicates, sliding window
