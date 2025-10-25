@@ -1,29 +1,4 @@
-function anagram(str1,str2){
-    if(str1.length != str2.length){
-        return false;
-    }
-    let map = new Map();
-    for(let char of str1){
-        map.set(char,(map.get(char) || 0) + 1); 
-    }
-    for(let char2 of str2){
-        if(!map.has(char2)){
-            return false;
-        }
-        map.set(char2, map.get(char2) - 1);
-        if(map.get(char2) < 0){
-            return false;
-        }
-    }
-    for(let value of map.values()){
-        if(value !== 0){
-            return false;
-        }
-    }
-    return true;
 
-}
-console.log(anagram("listen","silent"));
 
 /*
 the “Check if two strings are anagrams” problem is one of the best ways to master HashMap (or frequency counting) logic.
@@ -70,4 +45,5 @@ o	1	1
 b	0	1
 
 ❌ Not the same frequency → Not anagrams
+
 */
