@@ -1,0 +1,253 @@
+🔥 This is a gold-standard question.
+If you learn these patterns, you can solve 80–90% of array problems without panic.
+
+I’ll give you:
+
+✅ All core array patterns
+
+✅ When to use each
+
+✅ Mental trigger words
+
+❌ No unnecessary theory
+
+🧠 CORE ARRAY PATTERNS (MASTER THESE)
+1️⃣ Simple Traversal (Baseline Pattern)
+🧩 What it is
+
+Loop once and track something.
+
+🔑 When to use
+
+Find max / min
+
+Sum / count
+
+Check condition
+
+🧠 Trigger words
+
+“Find”
+
+“Count”
+
+“Check”
+
+📌 Examples
+
+Largest element
+
+Count even/odd
+
+Check sorted array
+
+2️⃣ Frequency Counting (Map / Hashing)
+🧩 What it is
+
+Track how many times elements appear.
+
+🔑 When to use
+
+Duplicates
+
+Equality ignoring order
+
+Subset problems
+
+🧠 Trigger words
+
+“Frequency”
+
+“Repeated”
+
+“Same elements”
+
+📌 Examples
+
+First repeating element
+
+Array equality
+
+Majority element
+
+3️⃣ Two Pointers 👉👈
+🧩 What it is
+
+Use two indices to avoid nested loops.
+
+🔑 When to use
+
+Sorted arrays
+
+Partition problems
+
+Reversals
+
+🧠 Trigger words
+
+“Pair”
+
+“Sorted”
+
+“Move elements”
+
+📌 Examples
+
+Pair with sum
+
+Reverse array
+
+Move zeros
+
+4️⃣ Sliding Window 🪟
+🧩 What it is
+
+Process contiguous subarrays efficiently.
+
+🔑 When to use
+
+Subarrays
+
+Fixed or variable window
+
+🧠 Trigger words
+
+“Subarray”
+
+“Continuous”
+
+“Window size k”
+
+📌 Examples
+
+Max sum subarray
+
+Longest subarray with condition
+
+5️⃣ Prefix Sum ➕
+🧩 What it is
+
+Precompute sums to answer range queries.
+
+🔑 When to use
+
+Range sum
+
+Subarray sum = K
+
+🧠 Trigger words
+
+“Range”
+
+“Sum between indices”
+
+📌 Examples
+
+Range sum queries
+
+Equilibrium index
+
+6️⃣ Kadane’s Algorithm ⚡
+🧩 What it is
+
+Find maximum sum subarray.
+
+🔑 When to use
+
+Max contiguous sum
+
+🧠 Trigger words
+
+“Maximum subarray sum”
+
+“Largest sum”
+
+📌 Examples
+
+Max subarray problem
+
+Circular subarray sum
+
+7️⃣ Sorting-based Pattern
+🧩 What it is
+
+Sort first, then solve easily.
+
+🔑 When to use
+
+Order matters
+
+Compare neighbors
+
+🧠 Trigger words
+
+“Closest”
+
+“Min difference”
+
+📌 Examples
+
+Min difference pair
+
+Check duplicates
+
+8️⃣ In-place Modification
+🧩 What it is
+
+Solve without extra space.
+
+🔑 When to use
+
+Space optimization
+
+Modify array directly
+
+🧠 Trigger words
+
+“Without extra space”
+
+“In-place”
+
+📌 Examples
+
+Remove duplicates
+
+Move zeros in-place
+
+9️⃣ Binary Search (on arrays)
+🧩 What it is
+
+Divide & conquer on sorted arrays.
+
+🔑 When to use
+
+Sorted array
+
+Search problems
+
+🧠 Trigger words
+
+“Find element”
+
+“Sorted”
+
+📌 Examples
+
+Search in sorted array
+
+First/last occurrence
+
+🧠 HOW TO CHOOSE THE RIGHT PATTERN (IMPORTANT)
+
+Ask these questions:
+
+1️⃣ Is order important? → Sorting / Two pointers
+2️⃣ Is it contiguous? → Sliding window / Kadane
+3️⃣ Are frequencies involved? → Map
+4️⃣ Is it range-based? → Prefix sum
+5️⃣ Is array sorted? → Binary search
+
+🔑 GOLDEN RULE (WRITE THIS DOWN)
+
+Identify the pattern first.
+Code comes second.
